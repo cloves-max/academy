@@ -19,10 +19,11 @@
     <table id="customers">
         <tr>
             <th>Nome</th>
+            <input id="filtro-nome"/>
             <th>N° Matricula</th>
             <th>Idade</th>
             <th>Sexo</th>
-            <th >mover pra direita Ações</th>
+            <th>mover pra direita Ações</th>
         </tr>
 
         </tr>
@@ -38,20 +39,20 @@
                 <td><?= $discentes['matricula'] ?></td>
                 <td><?= $discentes['idade'] ?></td>
                 <?php
-                if( $discentes['sexo']=='M'){?>
+                if ($discentes['sexo'] == 'M') { ?>
                     <td>Masculino</td>
                 <?php
-                }else{?>
+                } else { ?>
                     <td>Femino</td>
-                <?php    
+                <?php
                 }
                 ?>
-               
+
                 <td id="butonsfim">
                     <button class="button button3">edit</button>
                     <button class="button button4">delet</button>
                 </td>
-                
+
 
             </tr>
         <?php
@@ -62,3 +63,15 @@
 </body>
 
 </html>
+<script>
+var filtro = document.getElementById('filtro-nome');
+var tabela = document.getElementById('customers');
+filtro.onkeyup = function() {
+    var nomeFiltro = filtro.value;
+    for (var i = 1; i < tabela.rows.length; i++) {
+        var conteudoCelula = tabela.rows[i].cells[0].innerText;
+        var corresponde = conteudoCelula.toLowerCase().indexOf(nomeFiltro) >= 0;
+        tabela.rows[i].style.display = corresponde ? '' : 'none';
+    }
+};
+</script>
