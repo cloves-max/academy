@@ -64,6 +64,18 @@ input[type=submit] {
     background-color: #0a5517;
 }
 
+.button3 {
+    background-color: #0d6efd;
+}
+
+.button4 {
+    background-color: #dc3545;
+}
+
+#butonsfim {
+    text-align: end;
+}
+
 .button2>a {
     text-decoration: none;
     color: white;
