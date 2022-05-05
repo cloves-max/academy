@@ -16,13 +16,13 @@
     <button class="button button2"><a href="index_admin.php?menuop=createdisc">ADD Discente</a></button>   
 </div>
 <body>
-<table>
-        <tr>
-            <th>Nome</th>
-            <th>Matricula</th>
-            <th>Idade</th>
-            <th>Sexo</th>
-          
+<table id="customers">
+  <tr>
+    <th>Nome</th>
+    <th>N° Matricula</th>
+    <th>Idade</th>
+    <th>Sexo</th>
+  </tr>
             
         </tr>
         <?php

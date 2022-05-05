@@ -18,10 +18,10 @@ include('db/conexao.php');
 $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
 $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 $matricula = mysqli_real_escape_string($conexao, $_POST['matricula']);
-$peso = mysqli_real_escape_string($conexao, $_POST['idade']);
+$idade = mysqli_real_escape_string($conexao, $_POST['idade']);
 $sexo = mysqli_real_escape_string($conexao, $_POST['sexo']);
-$idade = mysqli_real_escape_string($conexao, $_POST['altura']);
-$altura = mysqli_real_escape_string($conexao, $_POST['peso']);
+$altura = mysqli_real_escape_string($conexao, $_POST['altura']);
+$peso = mysqli_real_escape_string($conexao, $_POST['peso']);
 
 
 $sql = "INSERT INTO discente (nome, senha, matricula, 
