@@ -19,7 +19,7 @@
     <table id="customers">
         <tr>
             <th>Nome</th>
-            <input id="filtro-nome"/>
+            <label>Buscar<input id="filtro-nome"/></label>
             <th>N° Matricula</th>
             <th>Idade</th>
             <th>Sexo</th>
