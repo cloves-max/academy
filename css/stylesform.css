@@ -68,6 +68,16 @@ input[type=submit] {
     background-color: #0d6efd;
 }
 
+.button3>a {
+    text-decoration: none;
+    color: white;
+}
+
+.button4>a {
+    text-decoration: none;
+    color: white;
+}
+
 .button4 {
     background-color: #dc3545;
 }

@@ -43,14 +43,14 @@
                     <td>Masculino</td>
                 <?php
                 } else { ?>
-                    <td>Femino</td>
+                    <td>Feminino</td>
                 <?php
                 }
                 ?>
 
                 <td id="butonsfim">
-                    <button class="button button3">edit</button>
-                    <button class="button button4">delet</button>
+                    <button class="button button3"><a href="index_admin.php?menuop=update&id=<?= $discentes['id'] ?>">edit</a></button>
+                    <button class="button button4"><a href="index_admin.php?menuop=delete&&id=<?= $discentes['id'] ?>">delete</a></button>
                 </td>
 
 
