@@ -5,7 +5,7 @@ CREATE DATABASE IFhealth;
 USE IFhealth;
 
 CREATE TABLE usuario(
-	idUsuario INT PRIMARY KEY SERIAL,
+	idUsuarioID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(45),
 	senha INT(45),
 	num_registro INT(14)
@@ -13,7 +13,7 @@ CREATE TABLE usuario(
 
 
 CREATE TABLE Discente(
-	idDiscente INT PRIMARY KEY SERIAL,
+	idDiscente int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(45),
 	senha VARCHAR(45),
 	numMatricula VARCHAR(14),
@@ -25,28 +25,28 @@ CREATE TABLE Discente(
 );
 
 CREATE TABLE Disponibilidade(
-	idDisponibilidade INT PRIMARY KEY SERIAL,
+	idDisponibilidade int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	dia date,
 	hora time,
 	livre BOOLEAN
 );
 
 CREATE TABLE Agendamento(
-	idAgendamento INT PRIMARY KEY SERIAL,
+	idAgendamento int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	fkTutor INT,
 	fkDiscente INT,
 	fkDisponibilidade INT
 );
 
 CREATE TABLE Anotacoes(
-	idAnotacoes INT PRIMARY KEY SERIAL,
+	idAnotacoes int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	descricao TEXT
 );
 
 CREATE TABLE Bloqueio(
-	idBloqueio INT PRIMARY KEY SERIAL,
+	idBloqueio int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	idDiscente INT,
-	idTutor INT,
+	idTutor INT
 	
 );
 
