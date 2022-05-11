@@ -5,9 +5,9 @@ CREATE DATABASE IFhealth;
 USE IFhealth;
 
 CREATE TABLE usuario(
-	idUsuarioID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	idUsuario int NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(45),
-	senha INT(45),
+	senha VARCHAR(45),
 	num_registro INT(14)
 );
 
@@ -54,7 +54,7 @@ ALTER TABLE Agendamento ADD CONSTRAINT `fk_Agendamento_idTutor`
 FOREIGN KEY (fkTutor) REFERENCES Usuario(idUsuario);
 
 ALTER TABLE Agendamento ADD CONSTRAINT `fk_Agendamento_idDisponivel` 
-FOREIGN KEY (fkDisponivel) REFERENCES Disponibilidade(idDisponivel);
+FOREIGN KEY (fkDisponibilidade) REFERENCES Disponibilidade(idDisponibilidade);
 
 
 ALTER TABLE Agendamento ADD CONSTRAINT `fk_Agendamento_idDiscente` 
